@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewData["Title"] = "CART";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="topcontent">
+    <img src="~/image/banner/banner1.png" class="img-fluid" style="margin:11px 0" />
+</div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-sm-12">
+            <div class="text-body1 text-justify">
+                <h1 class="h1 text-center font-weight-bold">@ViewData["Title"]</h1>
+            </div>
+            <table class="table justify-content-center align-content-center align-items-center">
+                <thead>
+                    <tr>
+                        <th scope="col">Image</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="~/image/product/table_top-stands/lumen1.png" height="60" />
+                        </td>
+                        <td class="text-wrap">LUMEN</td>
+                        <td class="salary">$<b>130.00</b></td>
+                        <td>
+                            <form class="form-inline">
+                                <input type="number" class="form-control-sm quantity" value="1" width="30" />
+                                <button class="btn btn-danger btn-sm">Remove</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="~/image/product/table_top-stands/nest1.png" height="60" />
+                        </td>
+                        <td class="text-wrap">ZUNO NEST</td>
+                        <td class="salary">$<b>160.00</b></td>
+                        <td>
+                            <form class="form-inline">
+                                <input type="number" class="form-control-sm quantity" value="1" width="30" />
+                                <button class="btn btn-danger btn-sm">Remove</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="text-right">Total: $290.00</p>
+            <a asp-controller="Cart" asp-action="Payment" class="btn btn-success float-right">Check out</a>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,36 @@
+﻿@model LayoutDemo.Models.Users
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="topcontent">
+    <img src="~/image/banner/banner1.png" class="img-fluid" style="margin:11px 0" />
+</div>
+<div class="container">
+    <h3 style="color:darkgreen">Đăng nhập tài khoản </h3>
+    <div class="row">
+        <div class="col-md-4">
+
+            @using (Html.BeginForm())
+            {
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"> Email :</label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password" class="control-label"> Mật Khẩu :</label>
+                    <input type="password" asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <br />
+                <div class="form-group">
+                    <input type="submit" value="Đăng Nhập" class="btn btn-success" />
+                </div>
+            }
+        </div>
+    </div>
+    <br />
+    <h4 style="color:darkgreen">Bạn chưa có tài khoản ? <a style="color :brown" href="@Url.Action("Register","Account")">Đăng kí ngay !</a> </h4>
+</div>

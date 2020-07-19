@@ -1,0 +1,66 @@
+@using Microsoft.AspNetCore.Http
+
+<header>
+    <nav class="navbar navbar-expand-md fixed-top navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                <img src="~/image/zuno_logo.png" height="50" />
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse justify-content-lg-center" id="navbarTogglerDemo03">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Product
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item font-weight-bold" asp-controller="Product" asp-action="Index">All Products</a>
+                            <a class="dropdown-item font-weight-bold" asp-controller="Product" asp-action="TableTopStands">Table Top Stands</a>
+                            <a class="dropdown-item font-weight-bold" asp-controller="Product" asp-action="PlantStands">Plant Stands</a>
+                            <a class="dropdown-item font-weight-bold" asp-controller="Product" asp-action="WallPlanters">Wall Planters</a>
+                            <a class="dropdown-item font-weight-bold" asp-controller="Product" asp-action="Other">Other</a>
+                        </div>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" asp-controller="Home" asp-action="About">About Us</a>
+                    </li>
+
+
+                    <li class="nav-item active">
+                        <a class="nav-link" asp-controller="Home" asp-action="Contact">Contact</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-3 my-lg-0 justify-content-end">
+                    <input class="form-control form-control-sm" type="search" placeholder="Search" aria-label="Search" id="Search" name="searchname"   />
+                    <a class="nav-link" asp-controller="Search" asp-action="Index"><img src="~/image/nav/search_100px.png" height="40" data-toggle="tooltip" title="Search" /></a>
+                    <a class="nav-link" asp-controller="Cart" asp-action="Index"><img src="~/image/nav/cart_100px.png" height="40" data-toggle="tooltip" title="Shopping Cart" /></a>
+                    @{
+                        // Kiểm tra đã đăng nhập hay chưa
+                        var email = Context.Session.GetString("Email");
+                        if (email != null)
+                        {   // Đăng nhập => Hiện email và nút đăng xuất
+                            <a class="nav-link" asp-controller="Account" asp-action="Logout"><img src="~/image/nav/user2.png" height="40" data-toggle="tooltip" title="Đăng xuất" /></a>
+                        }
+                        else
+                        {   // Chưa đăng nhập 
+                            <a class="nav-link" asp-controller="Account" asp-action="Login"><img src="~/image/nav/user2.png" height="40" data-toggle="tooltip" title="Đăng nhập" /></a>
+                        }
+                    }
+                </form>
+            </div>
+        </div>
+    </nav>
+<div class="container">
+    
+</div>
+</header>

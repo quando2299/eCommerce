@@ -1,0 +1,216 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="row">
+    <img class="img-fluid" src="~/image/banner/banner.png" />
+</div>
+<div class="container">
+    <h1 class="h1 text-center justify-content-center font-weight-bold" style="padding: 2em 4em;">Beautiful plant stands that encourage you to get creative</h1>
+    <div class="row justify-content-center" style="margin-bottom:3em">
+        <div class="col-12 col-md-6 col-sm-6">
+            <img src="~/image/home/index/favorite.png" class="img-fluid" />
+            <div class="text-body">
+                <p class="text-justify">Driven by a committment to encourage creativity with greenery, we design functional plant stands and botanical wares that amplify plant wares within a space. </p>
+                <a class="link__custom" asp-controller="Product" asp-action="Index">Shop all our products</a>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-sm-6">
+            <img src="~/image/home/index/favorite1.png" class="img-fluid" />
+        </div>
+    </div>
+    <!--carousel-->
+    <div id="carouselBanner" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselBanner" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselBanner" data-slide-to="1"></li>
+            <li data-target="#carouselBanner" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active text-white">
+                <img src="~/image/banner/banner_2160px.png" class="img-fluid" alt="banner">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="caption-header font-weight-bold">Our Favourites</h2>
+                    <a class="link__custom" asp-controller="Product" asp-action="Index">Shop Now</a>
+                </div>
+            </div>
+            <div class="carousel-item text-white">
+                <img src="~/image/banner/banner1_2160px.png" class="d-block img-fluid" alt="banner1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="caption-header font-weight-bold">The Create Collection</h2>
+                    <a class="link__custom2" asp-controller="Product" asp-action="Index">Shop Now</a>
+                </div>
+            </div>
+            <div class="carousel-item text-white">
+                <img src="~/image/banner/banner2_2160px.png" class="d-block img-fluid" alt="banner2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="caption-header font-weight-bold">Styling courtyards</h2>
+                    <a class="link__custom1" asp-controller="Product" asp-action="Index">Shop Now</a>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselBanner" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselBanner" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!--/. carousel-->
+    <!--new product-->
+    @*<h2 class="h2 text-center font-weight-bold">New products</h2>
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-5 col-sm-5">
+            <div class="card">
+                <img src="~/image/home/index/loop_1.jpg" class="card-img-top img-thumbnail">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold">Loop</h4>
+                    <p class="card-text salary">$50.00</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5 col-sm-5">
+            <div class="card">
+                <img src="~/image/home/index/drop2.jpg" class="card-img-top img-thumbnail">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold">Braided Drop</h4>
+                    <p class="card-text salary">$80.00</p>
+                </div>
+            </div>
+        </div>
+    </div>*@
+    <!--/. new product-->
+</div>
+<!--featured-->
+<div class="featured-body">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-3 col-sm-3">
+            <h2 class="h2 text-center">Featured</h2>
+            <div class="text-body">
+                <p>Designed and made in Melbourne.</p>
+                <a class="link__custom" asp-controller="Product" asp-action="Index">Shop all Favourites</a>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-3">
+            <div class="card">
+                <div class="img">
+                    <img src="~/image/home/index/foundation.jpg" class="card-img-top img-thumbnail">
+                    <div class="txt">
+                        <a href="#"><h3 style="color:aliceblue">MUA NGAY</h3></a>
+                        <a href="#"><h3 style="color:aliceblue">XEM CHI TIẾT</h3></a>
+                    </div>
+                </div>
+                
+                <div class="card-body">
+                    <h4 class="card-title">Foundation</h4>
+                    <p class="card-text salary">$125.00</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-3">
+            <div class="card">
+                <div class="img">
+                    <img src="~/image/home/index/malia.png" class="card-img-top img-thumbnail">
+                    <div class="txt">
+                        <a href="#"><h3 style="color:aliceblue">MUA NGAY</h3></a>
+                        <a href="#"><h3 style="color:aliceblue">XEM CHI TIẾT</h3></a>
+                    </div>
+                </div>
+               
+                <div class="card-body">
+                    <h4 class="card-title">Malia</h4>
+                    <p class="card-text salary">$150.00</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-3">
+            <div class="card">
+                <div class="img">
+                    <img src="~/image/home/index/nest.png" class="card-img-top img-thumbnail">
+                    <div class="txt">
+                        <a href="#"><h3 style="color:aliceblue">MUA NGAY</h3></a>
+                        <a href="#"><h3 style="color:aliceblue">XEM CHI TIẾT</h3></a>
+                    </div>
+                </div>
+              
+                <div class="card-body">
+                    <h4 class="card-title">Nest</h4>
+                    <p class="card-text salary">$220.00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/. featured-->
+
+<div class="container" style="padding: 2em 0em">
+    <div class="row justify-content-center align-content-center">
+        <div class="col-md-6 col-sm-6">
+            <h1 class="text-left font-weight-bold" style="margin: 2em">How to turn your home into a jungle retreat</h1>
+            <img src="~/image/home/index/book.png" class="img-fluid" />
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <img src="~/image/home/index/book1.png" class="img-fluid" />
+            <p class="text-justify" style="padding:4em 2em; ">
+                With design-savvy tips and expert advice you'll learn all there is to know about decorating with plants and botanical styling, plus the necessities like light requirements and when to water and feed. From bathroom to boudoir and every room in between, create your very own green oasis with Plant Style.
+            </p>
+        </div>
+    </div>
+    <div class="row justify-content-center align-content-center" style="margin:6em 0em;">
+        <div class="col-md-5 col-sm-5">
+            <img src="~/image/home/index/book2.png" class="img-fluid" />
+        </div>
+        <div class="col-md-4 col-sm-4" style="padding:3em">
+            <h1 class="h1 text-left font-weight-bold">Plant Style</h1>
+            <p class="salary">$50.00</p>
+            <div class="row">
+                <p class="col-md-4 col-sm-4">Quantity</p>
+                <div class="input-group col-md-6 col-sm-6">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-outline-dark btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+                            <span class="glyphicon glyphicon-minus">-</span>
+                        </button>
+                    </span>
+                    <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-outline-dark btn-number" data-type="plus" data-field="quant[1]">
+                            <span class="glyphicon glyphicon-plus">+</span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <button class="btn btn-success btn-block" style="margin-top:2em;">Add to cart</button>
+        </div>
+    </div>
+</div>
+
+<style>
+    .img {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .txt {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.52);
+        position: absolute;
+        bottom: 50px;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+        opacity: 0;
+    }
+
+    .img:hover div.txt {
+        opacity: 1;
+        transform: translateY(50px);
+        transition: ease-in-out 0.5s;
+    }
+
+    .img:hover img {
+        transform: scale(1.5);
+        transition: all ease-in-out 0.5s;
+    }
+</style>
