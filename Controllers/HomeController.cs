@@ -12,7 +12,7 @@ namespace LayoutDemo.Controllers
 {
     public class HomeController : Controller
     {
-        DataContext dataContext;
+        readonly DataContext dataContext;
 
         public HomeController(DataContext dataContext)
         {
@@ -35,19 +35,11 @@ namespace LayoutDemo.Controllers
             var product = dataContext.Products.FirstOrDefault(m => m.Name == searchname);
 
             return View(product);
-
-            //return RedirectToAction("SearchItem", "Home");
         }
 
         public IActionResult Contact()
         {
             return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

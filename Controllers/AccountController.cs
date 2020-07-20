@@ -28,7 +28,7 @@ namespace LayoutDemo.Controllers
         }
 
         [HttpPost]
-        public IActionResult Login(Users user, string returnUrl)
+        public IActionResult Login(Users user)
         {
             var temp = dataContext.Users.FirstOrDefault(m => m.Email == user.Email);
 

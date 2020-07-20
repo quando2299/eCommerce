@@ -388,8 +388,6 @@ C:\Users\quand\Downloads\LayoutDemo\LayoutDemo\obj\Debug\netcoreapp3.1\Razor\Vie
 C:\Users\quand\Downloads\LayoutDemo\LayoutDemo\obj\Debug\netcoreapp3.1\Razor\Views\Product\ProductDetail.cshtml.g.cs
 C:\Users\quand\Downloads\LayoutDemo\LayoutDemo\obj\Debug\netcoreapp3.1\Razor\Views\Product\TableTopStands.cshtml.g.cs
 C:\Users\quand\Downloads\LayoutDemo\LayoutDemo\obj\Debug\netcoreapp3.1\Razor\Views\Product\WallPlanters.cshtml.g.cs
-C:\Users\quand\Downloads\LayoutDemo\LayoutDemo\obj\Debug\netcoreapp3.1\Razor\Views\Search\Index.cshtml.g.cs
-C:\Users\quand\Downloads\LayoutDemo\LayoutDemo\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\quand\Downloads\LayoutDemo\LayoutDemo\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Footer.cshtml.g.cs
 C:\Users\quand\Downloads\LayoutDemo\LayoutDemo\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Header.cshtml.g.cs
 C:\Users\quand\Downloads\LayoutDemo\LayoutDemo\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -405,3 +403,4 @@ C:\Users\quand\Downloads\LayoutDemo\LayoutDemo\obj\Debug\netcoreapp3.1\staticweb
 C:\Users\quand\Downloads\LayoutDemo\LayoutDemo\obj\Debug\netcoreapp3.1\LayoutDemo.dll
 C:\Users\quand\Downloads\LayoutDemo\LayoutDemo\obj\Debug\netcoreapp3.1\LayoutDemo.pdb
 C:\Users\quand\Downloads\LayoutDemo\LayoutDemo\obj\Debug\netcoreapp3.1\LayoutDemo.genruntimeconfig.cache
+C:\Users\quand\Downloads\LayoutDemo\LayoutDemo\obj\Debug\netcoreapp3.1\Razor\Views\Product\SearchItem.cshtml.g.cs

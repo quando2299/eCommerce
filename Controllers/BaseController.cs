@@ -14,11 +14,11 @@ namespace LayoutDemo.Controllers
         public override void OnActionExecuted(ActionExecutedContext filterContext)
         {
             //if (ViewBag.UserID == null || ViewBag.UserID != 1)
-            if (HttpContext.Session.GetInt32("UserID") != 1 || HttpContext.Session.GetInt32("UserID") == null)
+            if (HttpContext.Session.GetInt32("UserID") == null)
             {
                 filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
                 {
-                    controller = "Accounts",
+                    controller = "Account",
                     action = "Login"
                 }));
             }

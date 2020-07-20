@@ -20551,11 +20551,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\quand\\Downloads\\LayoutDemo\\LayoutDemo\\Views\\Search\\Index.cshtml",
-      "TargetPath": "Views\\Search\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\quand\\Downloads\\LayoutDemo\\LayoutDemo\\Views\\Product\\TableTopStands.cshtml",
       "TargetPath": "Views\\Product\\TableTopStands.cshtml",
       "FileKind": "mvc"

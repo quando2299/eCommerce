@@ -1,7 +1,9 @@
-﻿
+﻿@model List<LayoutDemo.Models.ViewModel.Cart>
 @{
     ViewData["Title"] = "Payment";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    int sum = 0;
+    int total = 0;
 }
 <div class="topcontent">
     <img src="~/image/banner/banner1.png" class="img-fluid" style="margin:11px 0" />
@@ -61,23 +63,30 @@
                 <table class="table justify-content-center align-content-center align-items-center">
                    
                     <tbody>
-                        <tr>
+                        @*<tr>
                             <td>
                                 <img src="~/image/product/table_top-stands/lumen1.png" height="60" />
                             </td>
                             <td class="text-wrap">LUMEN</td>
                             <td class="salary">$<b>130.00</b></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="~/image/product/table_top-stands/nest1.png" height="60" />
-                            </td>
-                            <td class="text-wrap">ZUNO NEST</td>
-                            <td class="salary">$<b>160.00</b></td>
-                        </tr>
+                        </tr>*@
+
+                        @foreach (var item in Model)
+                        {
+                            sum = item.Quantity * item.Price;
+                            total += sum;
+                            <tr>
+                                <td>
+                                    <img src="~/image/product/all/@item.Image" height="60" />
+                                </td>
+                                <td class="text-wrap">@Html.DisplayFor(m => item.Name)</td>
+                                <td class="salary"><b>@Html.DisplayFor(m => item.Price)</b></td>
+                                <td class="text-wrap">@sum</td>
+                            </tr>
+                        }
                     </tbody>
                 </table>
-                <p class="text-right">Total: $290.00</p>
+                <p class="text-right">Total: @total</p>
             </div>
         </div>
     </div>

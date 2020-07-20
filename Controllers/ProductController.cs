@@ -10,7 +10,7 @@ namespace LayoutDemo.Controllers
 {
     public class ProductController : Controller
     {
-        DataContext dataContext;
+        readonly DataContext dataContext;
 
         public ProductController(DataContext dataContext)
         {
@@ -24,11 +24,17 @@ namespace LayoutDemo.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult SearchItem(string searchname)
+        {
+            return View(dataContext.Products.FirstOrDefault(m => m.Name == searchname));
+        }
+
         public IActionResult TableTopStands()
         {
             return View();
         }
-        public IActionResult PlantStands ()
+        public IActionResult PlantStands()
         {
             return View();
         }
@@ -40,9 +46,10 @@ namespace LayoutDemo.Controllers
         {
             return View();
         }
-        public IActionResult ProductDetail()
+        public IActionResult ProductDetail(int id)
         {
-            return View();
+            var product = dataContext.Products.FirstOrDefault(m => m.ID == id);
+            return View(product);
         }
     }
 }

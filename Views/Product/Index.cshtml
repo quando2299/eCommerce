@@ -39,7 +39,9 @@
                                     <div class="img">
                                         <img class="card-img-top img-fluid " src="~/image/product/all/@item.Image"/>
                                         <div class="txt">
-                                            <a href="@Url.Action("Details", "")"><h5 style="color:aliceblue">XEM CHI TIẾT</h5></a>
+                                            <a href="@Url.Action("ProductDetail", "Product")"><h5 style="color:aliceblue">XEM CHI TIẾT</h5></a>
+                                            <a href="@Url.Action("Buy", "Cart", new { id = item.ID})"><h5 style="color:aliceblue">Buy</h5></a>
+                                            <a href="@Url.Action("BuyNow", "Cart", new { id = item.ID})"><h5 style="color:aliceblue">Buy Now</h5></a>
                                         </div>
                                     </div>
 

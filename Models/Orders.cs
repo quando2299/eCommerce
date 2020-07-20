@@ -9,7 +9,7 @@ namespace LayoutDemo.Models
     {
         public int ID { get; set; }
 
-        public Users users { get; set; }
+        public Users Users { get; set; }
 
         public int UsersID { get; set; }
 

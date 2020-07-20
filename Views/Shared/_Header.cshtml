@@ -40,23 +40,24 @@
                         <a class="nav-link" asp-controller="Home" asp-action="Contact">Contact</a>
                     </li>
                 </ul>
-                <form class="form-inline my-3 my-lg-0 justify-content-end">
-                    <input class="form-control form-control-sm" type="search" placeholder="Search" aria-label="Search" id="Search" name="searchname"   />
-                    <a class="nav-link" asp-controller="Search" asp-action="Index"><img src="~/image/nav/search_100px.png" height="40" data-toggle="tooltip" title="Search" /></a>
-                    <a class="nav-link" asp-controller="Cart" asp-action="Index"><img src="~/image/nav/cart_100px.png" height="40" data-toggle="tooltip" title="Shopping Cart" /></a>
-                    @{
-                        // Kiểm tra đã đăng nhập hay chưa
-                        var email = Context.Session.GetString("Email");
-                        if (email != null)
-                        {   // Đăng nhập => Hiện email và nút đăng xuất
-                            <a class="nav-link" asp-controller="Account" asp-action="Logout"><img src="~/image/nav/user2.png" height="40" data-toggle="tooltip" title="Đăng xuất" /></a>
-                        }
-                        else
-                        {   // Chưa đăng nhập 
-                            <a class="nav-link" asp-controller="Account" asp-action="Login"><img src="~/image/nav/user2.png" height="40" data-toggle="tooltip" title="Đăng nhập" /></a>
-                        }
-                    }
+                <form asp-controller="Product" asp-action="SearchItem" class="form-inline my-3 my-lg-0 justify-content-end">
+                    <input class="form-control form-control-sm" placeholder="Search" aria-label="Search" id="Search" name="searchname" />
+                    @* <a class="nav-link" asp-controller="Product" asp-action="SearchItem"><img src="~/image/nav/search_100px.png" height="40" data-toggle="tooltip" title="Search" /></a> *@
+                    <button type="submit" class="btn"><img src="~/image/nav/search_100px.png" height="40" data-toggle="tooltip" title="Search" /></button>
                 </form>
+                <a class="nav-link" asp-controller="Cart" asp-action="Index"><img src="~/image/nav/cart_100px.png" height="40" data-toggle="tooltip" title="Shopping Cart" /></a>
+                @{
+                    // Kiểm tra đã đăng nhập hay chưa
+                    var email = Context.Session.GetString("Email");
+                    if (email != null)
+                    {   // Đăng nhập => Hiện email và nút đăng xuất
+                        <a class="nav-link" asp-controller="Account" asp-action="Logout"><img src="~/image/nav/user2.png" height="40" data-toggle="tooltip" title="Đăng xuất" /></a>
+                    }
+                    else
+                    {   // Chưa đăng nhập 
+                        <a class="nav-link" asp-controller="Account" asp-action="Login"><img src="~/image/nav/user2.png" height="40" data-toggle="tooltip" title="Đăng nhập" /></a>
+                    }
+                }   
             </div>
         </div>
     </nav>
